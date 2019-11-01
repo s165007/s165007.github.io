@@ -13,7 +13,7 @@ function onYouTubeIframeAPIReady() {
       width: 640, // プレーヤーの幅
       height: 480, // プレーヤーの高さ
       videoId: 'M7lc1UVf-VE', // YouTubeのID
-	  playsinline: 1,
+	  playsinline: 0,
 	  playerVars: {
         loop: 1, // ループの設定
 		//playlist: ['I24azAvtwu8', '5PAc3krFyQA']  //'EHfx9LXzxpw' // 再生する動画のリスト
