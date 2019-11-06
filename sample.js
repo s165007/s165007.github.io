@@ -15,7 +15,7 @@ function onYouTubeIframeAPIReady() {
       videoId: 'M7lc1UVf-VE', // YouTubeのID
 	  playerVars: {
         loop: 1, // ループの設定
-		playlist: 'I24azAvtwu8',
+		playlist: 'I24azAvtwu8','iy6gUYpyGQI',
 		playsinline: 1
 	  }
 	  
