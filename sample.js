@@ -12,10 +12,10 @@ function onYouTubeIframeAPIReady() {
     {
       width: 640, // プレーヤーの幅
       height: 480, // プレーヤーの高さ
-      videoId: 'M7lc1UVf-VE', // YouTubeのID
+      videoId: 'iy6gUYpyGQI', // YouTubeのID
 	  playerVars: {
         loop: 1, // ループの設定
-		playlist: 'I24azAvtwu8','iy6gUYpyGQI',
+		playlist: 'I24azAvtwu8',
 		playsinline: 1
 	  }
 	  
