@@ -8,7 +8,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var ytPlayer;
 function onYouTubeIframeAPIReady() {
   ytPlayer = new YT.Player(
-    'sample', // 埋め込む場所の指定
+    'youtubePlayer', // 埋め込む場所の指定
     {
       width: 640, // プレーヤーの幅
       height: 480, // プレーヤーの高さ
@@ -23,61 +23,45 @@ function onYouTubeIframeAPIReady() {
   );
 }
 
-// 蜀咲函
-var ytPlay = document.getElementById('play');
-ytPlay.addEventListener('click', function() {
-	ytPlayer.playVideo();
-});
+new Vue({
+	el:'#sample',
+	data:{
+		playVideo()
+	},
+	methods: {
+		play: function(){
+			this.playVideo
+		}
+   }
+  }) 
 
-// 荳譎ょ●豁｢
+// 再生
+//var ytPlay = document.getElementById('play');
+//ytPlay.addEventListener('click', function() {
+//	ytPlayer.playVideo();
+//});
+
+// 一時停止
 var ytPause = document.getElementById('pause');
 ytPause.addEventListener('click', function() {
 	ytPlayer.pauseVideo();
 });
 
-// 蛛懈ｭ｢
+// 停止
 var ytStop = document.getElementById('stop');
 ytStop.addEventListener('click', function() {
 	ytPlayer.pauseVideo().seekTo(0);
 });
 
+// 戻る
 var ytPrevious = document.getElementById('previous');
 ytPrevious.addEventListener('click', function() {
 	ytPlayer.previousVideo().seekTo(0);
 });
 
+// 次へ
 var ytNext = document.getElementById('next');
 ytNext.addEventListener('click', function() {
 	ytPlayer.nextVideo().seekTo(0);
 });
-
-// 髻ｳ驥上い繝��(+10)
-var ytVolup = document.getElementById('volup');
-ytVolup.addEventListener('click', function() {
-	// 迴ｾ蝨ｨ縺ｮ髻ｳ驥丞叙蠕
-	var currentVol = ytPlayer.getVolume();
-	ytPlayer.setVolume(currentVol + 10);
-});
-
-// 髻ｳ驥上ム繧ｦ繝ｳ(-10)
-var ytVoldown = document.getElementById('voldown');
-ytVoldown.addEventListener('click', function() {
-	// 迴ｾ蝨ｨ縺ｮ髻ｳ驥丞叙蠕
-	var currentVol = ytPlayer.getVolume();
-	ytPlayer.setVolume(currentVol - 10);
-});
-
-// 繝溘Η繝ｼ繝
-var ytMute = document.getElementById('mute');
-ytMute.addEventListener('click', function() {
-	// 繝溘Η繝ｼ繝医＆繧後※縺�ｋ縺九←縺�°
-	if(ytPlayer.isMuted()) {
-		// 繝溘Η繝ｼ繝医�隗｣髯､
-		ytPlayer.unMute();
-	} else {
-		// 繝溘Η繝ｼ繝
-		ytPlayer.mute();
-	}
-});
-
 
