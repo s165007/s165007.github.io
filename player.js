@@ -23,17 +23,7 @@ function onYouTubeIframeAPIReady() {
   );
 }
 
-new Vue({
-	el:'#sample',
-	data:{
-		playVideo()
-	},
-	methods: {
-		play: function(){
-			this.playVideo
-		}
-   }
-  }) 
+
 
 // 再生
 //var ytPlay = document.getElementById('play');
