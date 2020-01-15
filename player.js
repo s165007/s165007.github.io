@@ -16,7 +16,7 @@ function onYouTubeIframeAPIReady() {
 	  playerVars: {
         loop: 1, // ループの設定
 		playlist: 'I24azAvtwu8',
-		playsinline: 1
+		
 	  }
 	  
     }
