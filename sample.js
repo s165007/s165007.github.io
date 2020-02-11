@@ -34,8 +34,8 @@ var options = document.querySelectorAll("#kuni option");
 function onYouTubeIframeAPIReady() {
     ytPlayer = new YT.Player(ytArea, {
         videoId: ytID,
-        width: 380, 
-        height: 200,
+        width: 640, 
+        height: 360,
         playerVars: {
             loop: 1, // ループの設定
             playsinline: 1
