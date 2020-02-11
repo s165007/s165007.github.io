@@ -24,20 +24,8 @@ var ytID = '-YVxZNzJlS0';
 
 
 var list  = [
-    ['iI_cnK_YSro'],
-    ['c-yRN55iaQY'],
-    ['6ojrwEs55BA'],
-    ['tPv9ZPXmFWU'],
-    ['53V8dzk6U_k'],
-    ['5dJuYMj77_8'],
-    ['9p2wMpVVtXg'],
-    ['fTS1jAhWPbw'],
-    ['XqZZl95FsK8'],
-    ['u2qVU8OsRtw'],
-    ['R45Z7u2TA90'],
-    ['2PMWaii09qA'],
-    ['iI_cnK_YSro'],
-
+    ['iI_cnK_YSro','c-yRN55iaQY','6ojrwEs55BA','tPv9ZPXmFWU','53V8dzk6U_k','9p2wMpVVtXg','fTS1jAhWPbw',
+     'XqZZl95FsK8','u2qVU8OsRtw','R45Z7u2TA90','2PMWaii09qA','iI_cnK_YSro']
 ]
 
 var select = document.querySelector("#kuni");
@@ -57,7 +45,7 @@ function onYouTubeIframeAPIReady() {
 // array -> playlist
 //
 
-
+/*
 select.addEventListener ('change', function() {
     var index = this.selectedIndex;
     ytPlayer.cuePlaylist(list[index]);
@@ -66,13 +54,14 @@ select.addEventListener ('change', function() {
 
     
 );
+*/
 
 
-/*
-document.getElementById('set_list_a');select.addEventListener('change', function() {    
-    ytPlayer.cuePlaylist(list_a);
+document.getElementById('playlist').addEventListener('click', function() {    
+    ytPlayer.cuePlaylist(list);
 }, false);
 
+/*
 document.getElementById('set_list_b');select.addEventListener('change', function() {    
     ytPlayer.cuePlaylist(list_b);
 }, false);
@@ -87,6 +76,7 @@ document.getElementById('set_list_c').addEventListener('change', function() {
 //
 // next
 //
+
 document.getElementById('play_next_song').addEventListener('click', function() {    
     ytPlayer.nextVideo();
 }, false);
